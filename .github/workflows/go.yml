@@ -24,7 +24,7 @@ jobs:
         export PATH="$HOME/go/bin:$PATH"
 
     - name: Buildd
-      run: ./mdtest
+      run: ./mdtest go build -debug
 
     - name: Format
       run: if [ "$(goimports -s -l . | wc -l)" -gt 0 ]; then exit 1; fi
